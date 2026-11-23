@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><title>Form — Your first stretch</title><link rel="stylesheet" href="style.css"><script defer src="poses.js"></script><script defer src="atlas-poses.js"></script><script defer src="transcripts.js"></script><script defer src="catalog.js"></script><script defer src="directory.js"></script><script defer src="library.js"></script><script defer src="app.js"></script></head>
+<body><header><span class="brand"><svg aria-hidden="true" viewBox="0 0 36 36"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="23" cy="6" r="3"/><path d="m11 13 8-3 5 6 7-2M19 10l-4 12 9 1 4 8M15 22l-6 8H3"/></g></svg><span>FORM</span></span><div><a id="browse" href="?view=directory">Directory</a><button id="exit" hidden>Index</button><button id="sound" aria-label="Sound cues" aria-pressed="true">Sound on</button><button id="expand" aria-label="Enter fullscreen" title="Enter fullscreen">⛶</button></div></header>
+<main id="player"><div class="stage"><canvas width="720" height="420" id="figure" role="img" aria-label="Stick figure in a low lunge"></canvas></div>
+<section><div id="announcement" aria-live="polite"><small id="label">GUIDED PRACTICE / 01</small><h1 id="title">Your first <em>stretch.</em></h1><p id="cue">Seven movements. About six minutes on the mat.</p></div>
+<div id="clock" hidden></div><div class="actions"><button class="primary" id="action">Begin routine</button><button id="skip" hidden>Skip</button><button id="finish" hidden>Finish</button></div><p id="insight" hidden></p></section></main>
+<main id="library" hidden>
+<h1>Stretch <em>directory.</em></h1><nav class="directory-nav" aria-label="Directory sections"><a href="#featured">Video routines</a><a href="#index">Browse stretches</a><a href="#research">Benefits &amp; timing</a><a href="#goals">Goal routines</a></nav>
+<h2>Stay Flexy routines</h2><div id="featured"></div><div id="index" class="index-head"><h2>Stretch index</h2><select id="region" aria-label="Filter stretches by region"><option>All regions</option><option>Lower body</option><option>Upper body</option><option>Spine</option></select></div>
+<p id="indexSize"></p><p id="levelHint">Choose the version you can breathe through comfortably. Your choices carry into focused routines.</p>
+<input id="search" type="search" aria-label="Search the stretch index" placeholder="Search stretches or positions"><div id="entries"></div>
+<details id="research"><summary>Benefits, timing and evidence</summary><div id="reading"></div></details>
+<label class="option"><input type="checkbox" id="facts"> Occasional research notes between stretches</label>
+<h2>Work toward a goal</h2><p>Begin after a short warm-up. Choose a range you can ease out of. Back off if anything hurts.</p><div id="goals"></div><h2>Choose a routine</h2><div id="plans"></div>
+</main><footer><span id="foot">FULL BODY</span><div id="progress" aria-hidden="true"></div><span id="count">07 MOVEMENTS</span></footer></body></html>
