@@ -161,7 +161,7 @@ function show(){
   }
   $("figure").setAttribute("aria-label",mode==="done"?"Seated stick figure":families[family].name+(side?" — "+side+" side":""));
   $("foot").textContent=mode==="done"?"COMPLETE":mode==="intro"?originName.toUpperCase():mode==="preparing"?"GET INTO POSITION":mode==="paused"?"PAUSED":id===1?"ALTERNATE LEGS":"HOLD";
-  $("count").textContent=mode==="intro"?"07 MOVEMENTS":mode==="done"?"SESSION ENDED":String(number+1).padStart(2,"0")+" / "+String(sequence.length).padStart(2,"0");
+  $("count").textContent=mode==="intro"?String(sequence.length).padStart(2,"0")+" MOVEMENTS":mode==="done"?"SESSION ENDED":String(number+1).padStart(2,"0")+" / "+String(sequence.length).padStart(2,"0");
   [...progress.children].forEach((p,i)=>p.classList.toggle("on",mode==="done"||(mode!=="intro"&&i<=number)));
   if (shuffle && mode!=="done") {
     $("label").textContent="RANDOM ROUTINE · MOVEMENT "+shuffle.number+(side?" · "+side.toUpperCase()+" SIDE":"");
@@ -251,7 +251,7 @@ document.onfullscreenchange=()=>{
   const label=document.fullscreenElement?"Exit fullscreen":"Enter fullscreen";
   $("expand").setAttribute("aria-label",label);$("expand").title=label;
 };
-configureSession(originalItems(),routines[0].name);
+configureSession(defaultItems(),routines[0].name);
 show();
 if (isUnlocked() || new URLSearchParams(location.search).get("view")==="directory") openLibrary();
 requestAnimationFrame(frame);

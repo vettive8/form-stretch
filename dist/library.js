@@ -18,6 +18,9 @@ function chosen(family) {
   return Number.isInteger(saved)&&group.variants[saved] ? saved : group.default||0;
 }
 function originalItems(){return routines[0].ids.map(family=>({family,variant:families[family].default||0}));}
+function defaultItems(){
+  return [...originalItems(), {family:9,variant:0}, {family:24,variant:0}];
+}
 function node(tag,text,cls) {
   const el=document.createElement(tag);
   if(text!==undefined)el.textContent=text;
@@ -221,10 +224,10 @@ function openLibrary() {
   $("plans").replaceChildren();
   $("indexSize").textContent=families.length+" movement families · "+families.reduce((n,g)=>n+g.variants.length,0)+" animated variations · "+(exerciseReferences.length+clinicalReferences.length+yogaReferences.length)+" illustrated reference entries. Sources sometimes show the same stretch with a different setup.";
   showFeatured();showGoals();
-  routines.filter(r=>!r.original).forEach(r=>{
+  routines.forEach(r=>{
     const tile=node("article");tile.append(node("h3",r.name),node("p",r.description));
     tile.append(button(r.desk?"Pick a desk break":"Begin routine",()=>{
-      const items=r.desk?randomDesk():r.original?originalItems():r.ids.map(family=>({family,variant:chosen(family)}));
+      const items=r.desk?randomDesk():r.original?defaultItems():r.ids.map(family=>({family,variant:chosen(family)}));
       beginItems(items,r.name);
     }));$("plans").append(tile);
   });

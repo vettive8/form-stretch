@@ -101,7 +101,7 @@ families.push({name:"Supported middle split preparation",region:"Lower body",goa
   variation("Standing straddle with support","Stand on a grippy surface with a sturdy counter in reach. Step into a comfortable wide stance. Keep hands supported, knees soft and in line with your toes. Hinge slightly, then return before stepping in.",splitGuide,"wideStraddle",24)
 ]});
 const routines = [
-  {name:"Full body reset",description:"The original seven-movement floor practice.",ids:[0,1,2,3,4,5,6],original:true},
+  {name:"Full body reset",description:"The daily floor routine with a seated neck rotation and side bend to finish.",ids:[0,1,2,3,4,5,6],original:true},
   {name:"Whole-body practice",description:"Your chosen pancake, figure four, lunge, chest opener and lat reach in one session.",ids:[2,3,0,7,4]},
   {name:"Hips and hamstrings",description:"A lunge, a straddle and an outer-hip stretch at your chosen levels.",ids:[0,2,3]},
   {name:"Overhead reach",description:"Open the chest, reach through the lats and finish with wall slides. Have a wall nearby.",ids:[7,4,8]},
