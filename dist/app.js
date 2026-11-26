@@ -253,5 +253,5 @@ document.onfullscreenchange=()=>{
 };
 configureSession(defaultItems(),routines[0].name);
 show();
-if (isUnlocked() || new URLSearchParams(location.search).get("view")==="directory") openLibrary();
+if (new URLSearchParams(location.search).get("view")==="directory") openLibrary();
 requestAnimationFrame(frame);
